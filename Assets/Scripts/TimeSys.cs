@@ -10,10 +10,10 @@ public class TimeSys : MonoBehaviour
     public TextMeshPro dayNum;
     public TextMeshPro clock;
     public Image screenColor;
-    public float minLength=1;
+    public float minLength = 1f;
     float counter;
-    int min;
-    int hr;
+    public int hr;
+    public int min;
     public string type="night";
     // Start is called before the first frame update
     void Start()
