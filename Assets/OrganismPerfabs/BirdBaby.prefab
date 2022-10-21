@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b9d73e39e5cca49b3cf99641f62936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  intiSize: 50
+  maxHealth: 16
+  intiSize: 60
   intiNutrition: 0
   maxNutrition: 0
   lifeSpan: 4
