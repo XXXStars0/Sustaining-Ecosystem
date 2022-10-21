@@ -30,12 +30,12 @@ public class Bug : MonoBehaviour
         moveTimer++;
         if (moveTimer == maxTimer)
         {
-            maxTimer = Random.Range(120, 360);
+            maxTimer = Random.Range(60, 300);
             X_move = Random.Range(-2, 3);
             Y_move = Random.Range(-2, 3);
             //lay egg
-            int Ran = Random.Range(0,15);
-            if (this.GetComponent<Organism>().currSize>=80 && Ran<5)
+            int Ran = Random.Range(0,3);
+            if (this.GetComponent<Organism>().currSize>=80 && Ran<1)
             {
                 Instantiate(egg, this.transform.position, Quaternion.identity);
             }
