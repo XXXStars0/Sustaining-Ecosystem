@@ -35,7 +35,7 @@ public class Bug : MonoBehaviour
             Y_move = Random.Range(-2, 3);
             //lay egg
             int Ran = Random.Range(0,15);
-            if (this.GetComponent<Organism>().currSize>=90 && Ran<5)
+            if (this.GetComponent<Organism>().currSize>=80 && Ran<5)
             {
                 Instantiate(egg, this.transform.position, Quaternion.identity);
             }

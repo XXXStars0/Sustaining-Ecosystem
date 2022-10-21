@@ -115,7 +115,7 @@ public class Bird_Baby : MonoBehaviour
 
             }
             //Eats Bug Eggs or small bugs
-            if (c.gameObject.CompareTag("BugEgg")||(c.gameObject.CompareTag("Bug")&&( (c.gameObject.GetComponent<Organism>().currSize<this.GetComponent<Organism>().currSize)||(c.gameObject.GetComponent<Organism>().currSize <80))))
+            if (c.gameObject.CompareTag("BugEgg")||(c.gameObject.CompareTag("Bug")&&( (c.gameObject.GetComponent<Organism>().currSize<this.GetComponent<Organism>().currSize)||(c.gameObject.GetComponent<Organism>().currSize <65))))
             {
                 eat.Play();
                 carCount++;

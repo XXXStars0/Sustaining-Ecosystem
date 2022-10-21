@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1394968068, guid: 5301dd049a9b5b146aad2618b69e251b, type: 3}
-  m_Color: {r: 0.6390276, g: 0.25591847, b: 0.6698113, a: 1}
+  m_Color: {r: 0.5643656, g: 0.2173905, b: 0.92156863, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,8 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   intiSize: 20
-  intiNutrition: -1
-  maxNutrition: -5
+  intiNutrition: -4
+  maxNutrition: -12
   lifeSpan: 7
   birthDay: 0
   birthHour: 0

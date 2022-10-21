@@ -995,8 +995,8 @@ MonoBehaviour:
   fruit: {fileID: 8386243815841030149, guid: a3c32fea7233fd24b9db86ef40c97bd3, type: 3}
   poisonfruit: {fileID: 6430361240102689182, guid: 1babde35c793bd64e8c257ad66c4c9ff, type: 3}
   minCluster: 4
-  maxCluster: 8
-  bugProduce: 12
+  maxCluster: 10
+  bugProduce: 8
   bugegg: {fileID: 1087481980423977355, guid: b79562d2010092d4e8862640eab654eb, type: 3}
 --- !u!114 &677542392
 MonoBehaviour:
