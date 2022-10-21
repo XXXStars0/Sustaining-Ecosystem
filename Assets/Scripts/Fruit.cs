@@ -17,7 +17,6 @@ public class Fruit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         int size = this.GetComponent<Organism>().currSize;
         int age = this.GetComponent<Organism>().age_hours;
         if (size < 100)

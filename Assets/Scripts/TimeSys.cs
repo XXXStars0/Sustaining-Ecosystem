@@ -6,18 +6,27 @@ using TMPro;
 
 public class TimeSys : MonoBehaviour
 {
-    public int day = 0;
+    [Header("Settings")]
     public TextMeshPro dayNum;
     public TextMeshPro clock;
     public Image screenColor;
+    [Header("Clocks")]
     public float minLength = 1f;
+    public int day = 0;
     float counter;
     public int hr;
     public int min;
     public string type="night";
+    [Header("Fruit")]
+    public int fruitProduce;
+    public GameObject fruit;
+    public int minCluster;
+    public int maxCluster;
+    int f_counter;
     // Start is called before the first frame update
     void Start()
     {
+        f_counter = fruitProduce;
         counter = 0;
     }
 
@@ -34,6 +43,7 @@ public class TimeSys : MonoBehaviour
         {
             min = 0;
             hr ++;
+            f_counter++;
         }
         if (hr >= 24)
         {
@@ -61,8 +71,28 @@ public class TimeSys : MonoBehaviour
         clock.text = hourPresent + " : " + minPresent;
 
         screenColor.color = new Color(getR()/255,getG()/255,getB()/255,getA()/255);
+
+        if (f_counter >= fruitProduce)
+        {
+            float x = Random.Range(-14f, 14f);
+            float y = Random.Range(-10f, 10f);
+            int i = Random.Range(minCluster,maxCluster+1);
+            for (int j=0;j<i;j++)
+            {
+                produceFruit(x, y);
+            }
+
+            f_counter = 0;
+        }
     }
     //255 157 0 67
+
+    void produceFruit(float x, float y)
+    {
+        float xx = x+ Random.Range(-1f, 1f);
+        float yy = y+Random.Range(-1f, 1f);
+        Instantiate(fruit, new Vector3(xx,yy,1), Quaternion.identity);
+    }
 
     float getR()
     {

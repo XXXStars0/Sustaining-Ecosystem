@@ -20,9 +20,13 @@ public class Organism : MonoBehaviour
     public int age_hours;
 
     public bool aging=false;
+
+    int count_h;
     // Start is called before the first frame update
     void Start()
     {
+        count_h = 0;
+        lifeSpan += Random.Range(-lifeSpan/4, lifeSpan / 4);
         age_hours = 0;
         currSize = intiSize;
         health = maxHealth;
@@ -40,8 +44,22 @@ public class Organism : MonoBehaviour
         //age to die or 
         int hr = GameObject.Find("EventSystem").GetComponent<TimeSys>().hr;
         int day = GameObject.Find("EventSystem").GetComponent<TimeSys>().day;
-        age_hours = (day-birthDay) * 24 + hr;
-        if ((day>=(birthDay+lifeSpan)&&hr>=birthHour)||health<=0)
+        age_hours = (day - birthDay) * 24 + hr;
+        if (!this.GetComponent<Fruit>() && !this.GetComponent<BugEgg>())
+        {
+            int a = age_hours;
+            a = age_hours - a;
+            if (a == 1)
+            {
+                count_h++;
+            }
+            if (count_h >= 4) {
+                count_h = 0;
+                health--;
+            }
+        }
+
+        if (age_hours>=lifeSpan*24||health<=0)
         {
             aging = true;
         }
