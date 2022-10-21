@@ -20,6 +20,7 @@ public class TimeSys : MonoBehaviour
     [Header("Fruit")]
     public int fruitProduce;
     public GameObject fruit;
+    public GameObject poisonfruit;
     public int minCluster;
     public int maxCluster;
     int f_counter;
@@ -31,7 +32,7 @@ public class TimeSys : MonoBehaviour
     void Start()
     {
         f_counter = fruitProduce;
-        b_counter = 0;
+        b_counter = bugProduce;
         counter = 0;
     }
 
@@ -87,7 +88,12 @@ public class TimeSys : MonoBehaviour
             {
                 produceFruit(x, y);
             }
-
+            if (Random.Range(0,20)==1)
+            {
+                float xx = x + Random.Range(-1f, 1f);
+                float yy = y + Random.Range(-1f, 1f);
+                Instantiate(poisonfruit, new Vector3(xx, yy, 1), Quaternion.identity);
+            }
             f_counter = 0;
         }
 
