@@ -193,6 +193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSleep: 0
-  speedRange: 0.2
+  speedRange: 0.15
   isHerb: 0
   egg: {fileID: 3618126578326170711, guid: 408613f94765db94abd6ad10b3d2672c, type: 3}

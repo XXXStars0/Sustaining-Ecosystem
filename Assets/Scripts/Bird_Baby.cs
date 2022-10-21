@@ -75,11 +75,20 @@ public class Bird_Baby : MonoBehaviour
                 die.Play();
                 Destroy(gameObject);
             }
+            int carPop= 0;
+            GameObject[] b = GameObject.FindGameObjectsWithTag("Bird");
+            foreach (GameObject obj in b)
+            {
+                if(obj.GetComponent<Bird_Adult>() && !obj.GetComponent<Bird_Adult>().isHerb)
+                {
+                    carPop++;
+                }
+            }
 
-            if(herbEvo && herbCount >= carCount)
+            if (herbEvo && herbCount >= carCount)
             {
                 Instantiate(herbEvo, this.transform.position, Quaternion.identity);
-            }else if (carEvo)
+            }else if (carEvo && carPop<1)
             {
                 Instantiate(carEvo, this.transform.position, Quaternion.identity);
             }

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4404988747985769950}
   m_Layer: 0
   m_Name: BirdEgg
-  m_TagString: BugEgg
+  m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,9 +150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   intiSize: 50
-  intiNutrition: 2
-  maxNutrition: 2
-  lifeSpan: 1
+  intiNutrition: 0
+  maxNutrition: 0
+  lifeSpan: 2
   birthDay: 0
   birthHour: 0
   currSize: 0

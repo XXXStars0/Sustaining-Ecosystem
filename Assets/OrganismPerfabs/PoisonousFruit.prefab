@@ -104,7 +104,7 @@ MonoBehaviour:
   maxHealth: 1
   intiSize: 20
   intiNutrition: -4
-  maxNutrition: -12
+  maxNutrition: -18
   lifeSpan: 7
   birthDay: 0
   birthHour: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9caea1d75a71f74e9c00f45f66989f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxGrowTime: 48
+  maxGrowTime: 96
 --- !u!50 &6430361240102689172
 Rigidbody2D:
   serializedVersion: 4

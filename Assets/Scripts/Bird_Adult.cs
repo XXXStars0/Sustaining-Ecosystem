@@ -15,6 +15,7 @@ public class Bird_Adult : MonoBehaviour
     TimeSys timer;
     int changeCount;
     public GameObject egg;
+    bool layegg = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class Bird_Adult : MonoBehaviour
         die = GameObject.Find("SE_Die").GetComponent<AudioSource>();
         timer = GameObject.Find("EventSystem").GetComponent<TimeSys>();
         a = this.GetComponent<Animator>();
+        layegg = false;
     }
 
     // Update is called once per frame
@@ -158,14 +160,18 @@ public class Bird_Adult : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D c)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (c.gameObject.CompareTag("Nest"))
+        GameObject[] b = GameObject.FindGameObjectsWithTag("Bird");
+        if (b.Length<6 && layegg)
         {
-            if (Random.Range(0, 10) > 7)
-            {
-                Instantiate(egg, this.transform.position, Quaternion.identity);
-            }
+            layegg = false;
+            Instantiate(egg, this.transform.position, Quaternion.identity);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        layegg = true;
     }
 }
