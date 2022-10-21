@@ -8,6 +8,7 @@ TagManager:
   - Bug
   - BugEgg
   - Bird
+  - Nest
   layers:
   - Default
   - TransparentFX

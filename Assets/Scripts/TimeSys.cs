@@ -23,10 +23,15 @@ public class TimeSys : MonoBehaviour
     public int minCluster;
     public int maxCluster;
     int f_counter;
+    [Header("BugEgg")]
+    public int bugProduce;
+    public GameObject bugegg;
+    int b_counter;
     // Start is called before the first frame update
     void Start()
     {
         f_counter = fruitProduce;
+        b_counter = 0;
         counter = 0;
     }
 
@@ -44,6 +49,7 @@ public class TimeSys : MonoBehaviour
             min = 0;
             hr ++;
             f_counter++;
+            b_counter++;
         }
         if (hr >= 24)
         {
@@ -83,6 +89,14 @@ public class TimeSys : MonoBehaviour
             }
 
             f_counter = 0;
+        }
+
+        if (b_counter>=bugProduce)
+        {
+            float x = Random.Range(-14f, 14f);
+            float y = Random.Range(-10f, 10f);
+            Instantiate(bugegg, new Vector3(x, y, 1), Quaternion.identity);
+            b_counter = 0;
         }
     }
     //255 157 0 67

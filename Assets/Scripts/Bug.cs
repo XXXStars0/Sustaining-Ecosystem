@@ -34,7 +34,7 @@ public class Bug : MonoBehaviour
             X_move = Random.Range(-2, 3);
             Y_move = Random.Range(-2, 3);
             //lay egg
-            int Ran = Random.Range(0,30);
+            int Ran = Random.Range(0,15);
             if (this.GetComponent<Organism>().currSize>=90 && Ran<5)
             {
                 Instantiate(egg, this.transform.position, Quaternion.identity);
@@ -81,13 +81,13 @@ public class Bug : MonoBehaviour
             {
                 this.GetComponent<Organism>().currSize += n;
              }
-            if (this.GetComponent<Organism>().nutrition+n<= this.GetComponent<Organism>().maxNutrition)
+            if (this.GetComponent<Organism>().health+n<= this.GetComponent<Organism>().maxHealth)
             {
                 this.GetComponent<Organism>().health += n;
             }
             else
             {
-                this.GetComponent<Organism>().nutrition = this.GetComponent<Organism>().maxNutrition;
+                this.GetComponent<Organism>().health = this.GetComponent<Organism>().maxHealth;
                
             }
             Destroy(c.gameObject);

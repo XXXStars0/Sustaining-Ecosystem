@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5134618201215982845}
   - component: {fileID: 5134618201215982846}
   - component: {fileID: 5134618201215982847}
-  - component: {fileID: 5134618201215982787}
   - component: {fileID: 5134618201215982844}
+  - component: {fileID: 5134618201215982787}
   - component: {fileID: 5134618201215982785}
   - component: {fileID: 5134618201215982786}
   m_Layer: 0
@@ -109,6 +109,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &5134618201215982844
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5134618201215982840}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!61 &5134618201215982787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135,27 +156,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.08, y: 1.08}
   m_EdgeRadius: 0
---- !u!50 &5134618201215982844
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5134618201215982840}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 1
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 6
 --- !u!114 &5134618201215982785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +195,6 @@ MonoBehaviour:
   herbCount: 0
   carCount: 0
   isSleep: 0
-  herbEvo: {fileID: 5134618201215982840}
-  carEvo: {fileID: 5134618201215982840}
+  herbEvo: {fileID: 354308452193469693, guid: 8d7fbd57440696d4d8a11e26e4bb4c41, type: 3}
+  carEvo: {fileID: 2649454305934697853, guid: f425e6148f38f784eab2595d373271d1, type: 3}
   speedRange: 0.05

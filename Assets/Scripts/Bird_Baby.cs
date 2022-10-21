@@ -114,8 +114,8 @@ public class Bird_Baby : MonoBehaviour
                 Destroy(c.gameObject);
 
             }
-            //Eats Bug Eggs
-            if (c.gameObject.CompareTag("BugEgg"))
+            //Eats Bug Eggs or small bugs
+            if (c.gameObject.CompareTag("BugEgg")||(c.gameObject.CompareTag("Bug")&& c.gameObject.GetComponent<Organism>().currSize<this.GetComponent<Organism>().currSize))
             {
                 eat.Play();
                 carCount++;
@@ -125,13 +125,13 @@ public class Bird_Baby : MonoBehaviour
                 {
                     this.GetComponent<Organism>().currSize += n;
                 }
-                if (this.GetComponent<Organism>().nutrition + n <= this.GetComponent<Organism>().maxNutrition)
+                if (this.GetComponent<Organism>().health + n <= this.GetComponent<Organism>().maxHealth)
                 {
                     this.GetComponent<Organism>().health += n;
                 }
                 else
                 {
-                    this.GetComponent<Organism>().nutrition = this.GetComponent<Organism>().maxNutrition;
+                    this.GetComponent<Organism>().health = this.GetComponent<Organism>().maxHealth;
 
                 }
                 Destroy(c.gameObject);

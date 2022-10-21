@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  intiSize: 60
+  intiSize: 50
   intiNutrition: 4
   maxNutrition: 8
   lifeSpan: 12
