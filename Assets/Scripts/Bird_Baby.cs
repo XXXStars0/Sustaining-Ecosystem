@@ -39,7 +39,7 @@ public class Bird_Baby : MonoBehaviour
         if (!isSleep)
         {
             changeCount++;
-            if (changeCount > 200)
+            if (changeCount > 60)
             {
                 X_speed = Random.Range(-speedRange, speedRange);
                 Y_speed = Random.Range(-speedRange, speedRange);

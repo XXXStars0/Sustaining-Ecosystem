@@ -35,13 +35,10 @@ public class Bird_Adult : MonoBehaviour
         if (!isSleep)
         {
             changeCount++;
-            if (changeCount > 200)
+            if (changeCount > 30)
             {
-                while(X_speed==0 || Y_speed == 0)
-                {
                     X_speed = Random.Range(-speedRange, speedRange);
                     Y_speed = Random.Range(-speedRange, speedRange);
-                }
                 changeCount = 0;
             }
             if (this.transform.position.x > 14 || this.transform.position.x < -14)
