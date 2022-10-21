@@ -44,18 +44,19 @@ public class Organism : MonoBehaviour
         //age to die or 
         int hr = GameObject.Find("EventSystem").GetComponent<TimeSys>().hr;
         int day = GameObject.Find("EventSystem").GetComponent<TimeSys>().day;
+        int a = age_hours;
         age_hours = (day - birthDay) * 24 + hr;
-        if (!this.GetComponent<Fruit>() && !this.GetComponent<BugEgg>())
+        if (!this.GetComponent<Fruit>() && !this.GetComponent<BugEgg>() && !this.GetComponent<Bird_Egg>() && !(this.GetComponent<Bird_Baby>()&& this.GetComponent<Bird_Baby>().isSleep))
         {
-            int a = age_hours;
+
             a = age_hours - a;
             if (a == 1)
             {
                 count_h++;
             }
-            if (count_h >= 4) {
+            if (count_h >= 2) {
                 count_h = 0;
-                health--;
+                    health--;
             }
         }
 

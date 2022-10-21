@@ -23,4 +23,6 @@ public class BugEgg : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
 }
